@@ -13,6 +13,7 @@
 		CA18601F2A8BC07F00019EE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA18601E2A8BC07F00019EE6 /* Preview Assets.xcassets */; };
 		CA1860262A8BC36600019EE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1860252A8BC36600019EE6 /* Constants.swift */; };
 		CA1860282A8BC3BF00019EE6 /* SystemStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1860272A8BC3BF00019EE6 /* SystemStat.swift */; };
+		CA18602B2A8BCBCB00019EE6 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA18602A2A8BCBCB00019EE6 /* Charts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		CA18601E2A8BC07F00019EE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA1860252A8BC36600019EE6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CA1860272A8BC3BF00019EE6 /* SystemStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStat.swift; sourceTree = "<group>"; };
+		CA18602A2A8BCBCB00019EE6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = System/Library/Frameworks/Charts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA18602B2A8BCBCB00019EE6 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +44,7 @@
 			children = (
 				CA1860162A8BC07E00019EE6 /* SystemMonitor */,
 				CA1860152A8BC07E00019EE6 /* Products */,
+				CA1860292A8BCBCB00019EE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +75,14 @@
 				CA18601E2A8BC07F00019EE6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CA1860292A8BCBCB00019EE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA18602A2A8BCBCB00019EE6 /* Charts.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

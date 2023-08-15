@@ -6,22 +6,49 @@
 //
 
 import SwiftUI
+import Charts
 
 struct ContentView: View {
     
     @State var systemStats: [SystemStat] = []
-    let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
-
-    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
-            Text("\(systemStats.last?.cpuPercent ?? 0)").onReceive(timer) { input in
-                fetchSystemStats()
-            }
-            
-            Button("Get system status", action: fetchSystemStats)
+            VStack {
+                TabView {
+                    VStack {
+                        // "Memory: \(systemStats.last?.memoryUsed ?? 0.0)%"
+                        Text(String(format: "Memory: %.2f%%", systemStats.last?.memoryUsed ?? 0.0))
+                        Chart {
+                            ForEach(systemStats, id: \.date) { stat in
+                                LineMark(
+                                    x: .value("Date", stat.date), y: .value( "Percent", stat.memoryUsed)
+                                )
+                            }
+                        }.chartYScale(domain: 0...100)
+                    }
+                    
+                    VStack {
+                        Text(String(format: "CPU: %.2f%%", systemStats.last?.cpuPercent ?? 0.0))
+                        Chart {
+                            ForEach(systemStats, id: \.date) { stat in
+                                LineMark(
+                                    x: .value("Date", stat.date), y: .value( "Percent", stat.cpuPercent)
+                                )
+                            }
+                        }.chartYScale(domain: 0...100)
+                    }
+                }
+                .tabViewStyle(PageTabViewStyle())
+
+            }.padding(.horizontal, 16)
+                .frame(height: 200)
+                .onReceive(timer) { input in
+                    fetchSystemStats()
+                }
         }
+        
         .padding()
     }
     
