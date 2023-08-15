@@ -10,10 +10,15 @@ import SwiftUI
 struct ContentView: View {
     
     @State var systemStats: [SystemStat] = []
+    let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+
+    
     
     var body: some View {
         VStack {
-            Text("\(systemStats.count)")
+            Text("\(systemStats.last?.cpuPercent ?? 0)").onReceive(timer) { input in
+                fetchSystemStats()
+            }
             
             Button("Get system status", action: fetchSystemStats)
         }
