@@ -11,6 +11,8 @@
 		CA18601A2A8BC07E00019EE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1860192A8BC07E00019EE6 /* ContentView.swift */; };
 		CA18601C2A8BC07F00019EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA18601B2A8BC07F00019EE6 /* Assets.xcassets */; };
 		CA18601F2A8BC07F00019EE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA18601E2A8BC07F00019EE6 /* Preview Assets.xcassets */; };
+		CA1860262A8BC36600019EE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1860252A8BC36600019EE6 /* Constants.swift */; };
+		CA1860282A8BC3BF00019EE6 /* SystemStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1860272A8BC3BF00019EE6 /* SystemStat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CA1860192A8BC07E00019EE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA18601B2A8BC07F00019EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA18601E2A8BC07F00019EE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CA1860252A8BC36600019EE6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CA1860272A8BC3BF00019EE6 /* SystemStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				CA1860192A8BC07E00019EE6 /* ContentView.swift */,
 				CA18601B2A8BC07F00019EE6 /* Assets.xcassets */,
 				CA18601D2A8BC07F00019EE6 /* Preview Content */,
+				CA1860252A8BC36600019EE6 /* Constants.swift */,
+				CA1860272A8BC3BF00019EE6 /* SystemStat.swift */,
 			);
 			path = SystemMonitor;
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA1860282A8BC3BF00019EE6 /* SystemStat.swift in Sources */,
 				CA18601A2A8BC07E00019EE6 /* ContentView.swift in Sources */,
 				CA1860182A8BC07E00019EE6 /* SystemMonitorApp.swift in Sources */,
+				CA1860262A8BC36600019EE6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
